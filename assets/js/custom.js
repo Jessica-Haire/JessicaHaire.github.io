@@ -1,4 +1,14 @@
 const toggleElements = document.querySelectorAll(".read-more-toggle");
+const readMoreLabels = document.querySelectorAll('.read-more-label');
+readMoreLabels.forEach(label => {
+  label.addEventListener('mouseover', () => {
+    label.classList.add('hovered');
+  });
+
+  label.addEventListener('mouseout', () => {
+    label.classList.remove('hovered');
+  });
+});
 
 toggleElements.forEach(function (toggleElement, index) {
   const longTextContainer = toggleElement.nextElementSibling;
@@ -13,13 +23,16 @@ toggleElements.forEach(function (toggleElement, index) {
     } else {
       longTextContainer.style.display = "none";
       scrollPosition = shortTextContainer.offsetTop + 300; // Adjust scroll position by 20px
-      window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth"
+      });
       labelElement.textContent = "Mehr lesen...";
     }
   });
 
   // Set the initial label text
-  labelElement.textContent = toggleElement.checked
-    ? "Weniger anzeigen ⤴"
-    : "Mehr lesen...";
+  labelElement.textContent = toggleElement.checked ?
+    "Weniger anzeigen ⤴" :
+    "Mehr lesen...";
 });

@@ -273,6 +273,12 @@ p {
   text-align: justify;
   margin: 0 0 2rem 0;
 }
+@media (max-width: 767px) {
+  p {
+  text-align: left;
+  font-size: 16px;
+}
+}
 
 h1,
 h2,
@@ -3175,6 +3181,10 @@ header.major .date:after {
 }
 .read-more-label {
   margin: 0 0 2rem 0;
+}
+.read-more-label:hover,
+.read-more-label.hovered {
+  color: #18bfef !important;
 }
 
 /* Table */
