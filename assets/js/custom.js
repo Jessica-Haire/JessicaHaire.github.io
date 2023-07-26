@@ -9,7 +9,6 @@ readMoreLabels.forEach(label => {
     label.classList.remove('hovered');
   });
 });
-
 toggleElements.forEach(function (toggleElement, index) {
   const longTextContainer = toggleElement.nextElementSibling;
   const labelElement = document.querySelectorAll(".read-more-label")[index];
