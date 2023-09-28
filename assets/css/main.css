@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900,700,400,300");
 
 /*
 	Massively by HTML5 UP
@@ -271,7 +271,7 @@ i {
 
 p {
   text-align: justify;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0rem 0;
 }
 @media (max-width: 767px) {
   p {
@@ -287,7 +287,7 @@ h4,
 h5,
 h6 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 900;
+  font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.075em;
   text-transform: uppercase;
@@ -308,7 +308,7 @@ h6 a {
 h1 {
   font-size: 4rem;
   line-height: 1.1;
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
 
 h2 {
@@ -3107,10 +3107,13 @@ header.major .date:after {
 }
 /* CUSTOM CSS */
 #welcome-text {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 400;
   max-width: 600px;
 }
 #intro #welcome-message {
-  font-weight: bold;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 
@@ -3496,7 +3499,7 @@ body.is-preload #wrapper.fade-in:before {
   -moz-justify-content: -moz-flex-end;
   -webkit-justify-content: -webkit-flex-end;
   -ms-justify-content: -ms-flex-end;
-  justify-content: flex-end;
+  justify-content: center;
   -moz-transition: opacity 1s ease, -moz-transform 1s ease;
   -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3596,8 +3599,7 @@ body.is-preload #wrapper.fade-in:before {
 
 #intro p {
   font-size: 1.25rem;
-  font-style: italic;
-  margin-top: -0.25rem;
+  margin-top: -1rem;
   text-align: center;
 }
 
@@ -3656,8 +3658,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 @media screen and (max-width: 980px) {
   #intro {
-    padding: 4rem 4rem 2rem 4rem;
-    min-height: 90vh;
+    /* padding: 4rem 4rem 2rem 4rem; */
+    min-height: 100vh;
   }
 
   #intro p br {
