@@ -2,10 +2,16 @@ const toggleElements = document.querySelectorAll(".read-more-toggle");
 const readMoreLabels = document.querySelectorAll('.read-more-label');
 readMoreLabels.forEach(label => {
   label.addEventListener('mouseover', () => {
+    {
+      passive: true
+    }
     label.classList.add('hovered');
   });
 
   label.addEventListener('mouseout', () => {
+    {
+      passive: true
+    }
     label.classList.remove('hovered');
   });
 });
@@ -16,6 +22,9 @@ toggleElements.forEach(function (toggleElement, index) {
   let scrollPosition;
 
   toggleElement.addEventListener("click", function () {
+    {
+      passive: true
+    }
     if (this.checked) {
       longTextContainer.style.display = "block";
       labelElement.textContent = "Read less ⤴";

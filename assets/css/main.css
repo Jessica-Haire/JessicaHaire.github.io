@@ -275,9 +275,9 @@ p {
 }
 @media (max-width: 767px) {
   p {
-  text-align: left;
-  font-size: 16px;
-}
+    text-align: left;
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -287,7 +287,7 @@ h4,
 h5,
 h6 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
   text-transform: uppercase;
@@ -309,6 +309,7 @@ h1 {
   font-size: 4rem;
   line-height: 1.1;
   margin: 0;
+  font-weight: 300;
 }
 
 h2 {
@@ -3111,6 +3112,9 @@ header.major .date:after {
   font-weight: 400;
   max-width: 600px;
 }
+.separator {
+  color: #18bfef;
+}
 #intro #welcome-message {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 700;
@@ -3132,16 +3136,23 @@ header.major .date:after {
 }
 
 @media screen and (max-width: 736px) {
-  #profile-pic {
-    width: 20rem;
-    margin: 0 20px 0 10px;
+  #profile-pic.image.left {
+    width: 10rem;
+    margin: 4px 0px 0 0px;
+    /* top: 0.4rem; */
+    /* float: left; */
+    border: 3px solid white;
   }
   #welcome-text {
     max-width: 400px;
+    line-height: 0.6;
   }
   #intro #welcome-message {
     font-weight: bold;
     font-size: 1rem;
+  }
+  #intro h1 {
+    margin: 0;
   }
 }
 .tech-stack {
@@ -3155,8 +3166,10 @@ header.major .date:after {
 .h2-second {
   word-wrap: break-word;
   font-size: 80%;
+  font-weight: 700;
   text-align: center;
-  margin: unset;
+  margin: 1.5rem 0 0 0;
+  color: rgb(108, 108, 108);
   padding: unset;
 }
 
@@ -3679,8 +3692,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
   #intro h1 {
     font-size: 3.25rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+    line-height: 0.75;
+    margin-bottom: unset;
   }
 
   #intro p {
