@@ -222,11 +222,11 @@ html {
   }
 }
 
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   html {
     font-size: 10pt;
   }
-}
+} */
 
 body {
   color: #212931;
@@ -2715,9 +2715,7 @@ input[type="radio"]:focus + label:before {
 }
 
 .image.left {
-  float: left;
-  margin: 0 2rem 2rem 0;
-  top: 0.75rem;
+
 }
 
 .image.right {
@@ -3019,7 +3017,7 @@ article.special {
 header {
   cursor: default;
 }
-
+header p 
 header > .date {
   display: block;
   font-size: 0.8rem;
@@ -3123,38 +3121,17 @@ header.major .date:after {
 
 #profile-pic {
   border-radius: 50%;
+  margin: .75rem 0rem 1.5rem 0;
   overflow: hidden;
-  width: 17rem;
-  position: relative;
-  float: left;
+  width: 8rem; /* changed from 17 */
+  position: relative; 
   shape-outside: circle(50%);
   z-index: 0;
   border: 5px solid white;
   box-shadow: 0px 0px 0px 2px #18bfef;
   box-sizing: border-box;
-  /* margin: 0 20px 0 20px; */
 }
 
-@media screen and (max-width: 736px) {
-  #profile-pic.image.left {
-    width: 10rem;
-    margin: 4px 0px 0 0px;
-    /* top: 0.4rem; */
-    /* float: left; */
-    border: 3px solid white;
-  }
-  #welcome-text {
-    max-width: 400px;
-    line-height: 0.6;
-  }
-  #intro #welcome-message {
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  #intro h1 {
-    margin: 0;
-  }
-}
 .tech-stack {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
@@ -3609,10 +3586,12 @@ body.is-preload #wrapper.fade-in:before {
   font-size: 5rem;
   line-height: 1;
 }
-
 #intro p {
   font-size: 1.25rem;
   margin-top: -1rem;
+  text-align: center;
+}
+#header p {
   text-align: center;
 }
 
@@ -3691,7 +3670,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 
   #intro h1 {
-    font-size: 3.25rem;
+    font-size: 3.5rem;
     line-height: 0.75;
     margin-bottom: unset;
   }
@@ -3703,6 +3682,44 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
   #intro .actions {
     display: none;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #profile-pic.image.left {
+    width:7rem;
+    margin: 1rem 0 .5rem 0;
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 1px #18bfef;
+  }
+  #welcome-text {
+    max-width: 400px;
+    line-height: 0.6;
+  }
+  #intro #welcome-message {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  #intro h1 {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  #intro h1 {
+    font-size:11.7vw;
+  }
+  #profile-pic.image.left {
+    width:20vw;
+    margin: 3.5vw 0 1.75vw 0;
+  }
+  #intro #welcome-message {
+    font-weight: bold;
+    font-size: 3.65vw;
+  }
+  #intro #welcome-text {
+    max-width: 400px;
+    line-height: 0.6;
+    font-size: 4vw;
   }
 }
 
@@ -3808,6 +3825,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-color: #18bfef !important;
   color: #18bfef !important;
 }
+@media screen and (min-width: 1680px) and (max-width: 1735px) {
+  #header .logo {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1305px) {
+  #header .logo {
+    font-size: 2.7vw;
+  }
+}
 
 @media screen and (max-width: 980px) {
   #header {
@@ -3815,6 +3842,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     padding-bottom: 4rem;
   }
 }
+
 
 @media screen and (max-width: 736px) {
   #header {
